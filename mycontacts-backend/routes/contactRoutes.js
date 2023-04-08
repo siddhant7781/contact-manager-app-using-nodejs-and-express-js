@@ -4,7 +4,8 @@ const { getContacts, getContact, createContact, updateContact, deleteContact } =
 const validateToken = require('../middleware/validateTokenHandler');
 
 
-router.use(validateToken);
+router.use(validateToken); // validates every routes under this middleware
+
 router.route("/")
     .get(getContacts)
     .post(createContact)
